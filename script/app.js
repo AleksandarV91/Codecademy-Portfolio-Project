@@ -86,13 +86,13 @@ scrollLinks.forEach((link) => {
 
     let position = element.offsetTop - navHeight;
 
-    // if (navHeight > 500) {
-    //   position = position + containerHeight;
-    // }
+    if (navHeight > 100) {
+      position = position + containerHeight;
+    }
     window.scrollTo({
       left: 0,
       top: position,
     });
-    // linksContainer.style.height = 0;
+    linksContainer.style.height = 100;
   });
 });
