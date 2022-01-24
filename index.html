@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Site</title>
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/8a17da4cfc.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -26,9 +30,9 @@
           <!-- Nav Links -->
           <div class="nav-links">
             <ul class="links">
-              <li><a href="#about">about</a></li>
-              <li><a href="#work">work</a></li>
-              <li><a href="#contact">contact</a></li>
+              <li><a href="#about" class="scroll-link">about</a></li>
+              <li><a href="#work" class="scroll-link">work</a></li>
+              <li><a href="#contact" class="scroll-link">contact</a></li>
             </ul>
           </div>
         </div>
@@ -57,7 +61,7 @@
               <span style="--index: 2">Aleksandar</span>
             </div>
           </h1>
-          <p>I'm frontend developer based in the Belgrade, Serbia</p>
+          <p>I'm frontend developer based in the Belgrade</p>
         </div>
       </div>
       <!-- End of Banner -->
@@ -68,7 +72,68 @@
       <section id="work"></section>
       <!-- End of Work Section -->
       <!-- Contact Section -->
-      <section id="contact"></section>
+      <section id="contact">
+        <h3>Contact</h3>
+        <h2>Let's get in touch</h2>
+        <p class="paragraph">
+          I am eager to work on your projects and put your ideas into action.
+          Contact me. I'm just a click away from you.
+        </p>
+        <!-- Contact Content -->
+        <div class="contact-content">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <!-- Location -->
+            <div class="info">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p>Belgrade, BG 11030, Serbia</p>
+            </div>
+            <!-- Mail -->
+            <div class="info">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <p>s.pilence@gmail.com</p>
+            </div>
+            <!-- Phone -->
+            <div class="info">
+              <div class="info-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <p>+381 60 459 2227</p>
+            </div>
+          </div>
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form id="form" class="form">
+              <div class="form-input">
+                <input type="text" id="name" placeholder="Full name" />
+                <small></small>
+              </div>
+              <div class="mail-phone">
+                <div class="form-input">
+                  <input type="email" id="email" placeholder="Email address" />
+                  <small></small>
+                </div>
+                <div class="form-input">
+                  <input type="tel" id="phone" placeholder="Phone number" />
+                  <small></small>
+                </div>
+              </div>
+              <textarea
+                name="message"
+                id="comment"
+                cols="30"
+                rows="10"
+                placeholder="Enter your message..."
+              ></textarea>
+              <button class="submit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
       <!-- End of Contact Section -->
     </main>
     <!-- END OF MAIN -->

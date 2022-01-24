@@ -24,6 +24,7 @@
   --very-light-blue: #a2b2ee;
   --light-blue: #5f7adb;
   --white: rgb(233, 227, 227);
+  --red: hsl(0, 93%, 60%);
   font-family: var(--karla);
   font-size: 16px;
   font-weight: 400;
@@ -63,6 +64,7 @@ nav {
   position: fixed;
   width: 100vw;
   padding: 0.8rem 1rem;
+  z-index: 10;
 }
 
 .nav-header {
@@ -154,6 +156,12 @@ nav {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  nav {
+    padding: 0.5rem 3rem;
+  }
+}
+
 /* 
 -----------------------------------------
 -----------------------------------------
@@ -163,6 +171,10 @@ nav {
 */
 
 /* ---- BANNER ---- */
+
+.banner {
+  margin-bottom: 5rem;
+}
 
 .banner-image img {
   margin-top: 3rem;
@@ -193,7 +205,7 @@ nav {
   text-transform: uppercase;
   animation: stack 100ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
       calc(var(--index) * 120ms),
-    glitch 1s ease infinite 1s alternate-reverse;
+    glitch 2s ease infinite 2s alternate-reverse;
 }
 
 .stack span:nth-child(odd) {
@@ -320,5 +332,260 @@ nav {
 
   .banner-content p {
     font-size: 1.7rem;
+  }
+}
+
+/* ---- CONTACT SECTION ---- */
+
+#contact {
+  min-height: 100vh;
+  text-align: center;
+  padding: 1rem 0.7rem;
+  margin-bottom: 3rem;
+}
+
+#contact h3 {
+  color: var(--very-light-blue);
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0625rem;
+  font-weight: 700;
+}
+
+#contact h3::before,
+#contact h3::after {
+  content: "-";
+  color: var(--light-blue);
+}
+
+#contact h2 {
+  font-family: var(--dm-serig-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.7rem;
+}
+
+#contact .paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.1rem;
+  letter-spacing: 0.03rem;
+}
+
+.contact-info {
+  margin: 1.5rem 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon {
+  padding: 0.5rem 0.7rem;
+  background-color: var(--light-blue);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin: 0.8rem 0.5rem;
+}
+
+.info p {
+  align-self: center;
+  font-weight: 700;
+  font-family: var(--karla);
+  font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.625rem;
+}
+
+.form-input input {
+  padding: 0.8rem;
+  width: 17.5rem;
+  height: 2.5rem;
+  margin-top: 1.3rem;
+  border-radius: 1.5625rem;
+  border: transparent;
+  outline: transparent;
+}
+
+.form-input input:focus,
+textarea:focus {
+  border: 2.5px solid var(--light-blue);
+}
+
+textarea {
+  width: 17.5rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  margin-top: 1.3rem;
+  border: transparent;
+  outline: transparent;
+}
+
+textarea::placeholder {
+  font-family: var(--karla);
+  font-size: 0.8rem;
+}
+
+.submit {
+  width: 17.5rem;
+  height: 2.625rem;
+  border-radius: 1.5625rem;
+  border: transparent;
+  outline: transparent;
+  background: var(--light-blue);
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  margin-top: 1.3rem;
+}
+
+.form-input small {
+  color: var(--red);
+  font-weight: 600;
+  display: block;
+  text-align: left;
+  margin-top: 0.2rem;
+  position: relative;
+  left: 1rem;
+}
+
+.form-input.error input {
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+.form-input small {
+  opacity: 0;
+}
+
+.form-input.error small {
+  opacity: 1;
+}
+
+@media screen and (min-width: 375px) {
+  #contact {
+    padding: 0 1.3rem;
+  }
+
+  .form-input input,
+  textarea,
+  .submit {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  #contact {
+    padding: 0 1.5rem;
+  }
+
+  #contact h3 {
+    font-size: 1.7rem;
+  }
+
+  #contact h2 {
+    font-size: 2.3rem;
+  }
+
+  .form-input input,
+  textarea,
+  .submit {
+    width: 23.125rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+    margin-top: 1.3rem;
+  }
+
+  #contact .paragraph {
+    padding: 0 5rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.075rem;
+  }
+
+  .contact-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 4rem;
+  }
+
+  .submit:hover {
+    cursor: pointer;
+    background-color: var(--very-light-blue);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #contact h3 {
+    font-size: 2.5rem;
+  }
+
+  #contact h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #contact .paragraph {
+    font-size: 1.5rem;
+    padding: 0 8rem;
+    margin-bottom: 5rem;
+  }
+
+  .info-icon i {
+    font-size: 1.3rem;
+  }
+
+  .info p {
+    font-size: 1.3rem;
+  }
+
+  .mail-phone {
+    display: flex;
+  }
+
+  .form-input input {
+    height: 2.8rem;
+  }
+
+  #name {
+    width: 42rem;
+  }
+
+  #email,
+  #phone {
+    width: 20.5rem;
+  }
+
+  #phone {
+    margin-left: 1rem;
+  }
+
+  textarea {
+    width: 42rem;
+    height: 15rem;
+  }
+
+  .submit {
+    align-self: flex-start;
+    width: 17rem;
+    height: 3.1rem;
+    font-size: 1rem;
   }
 }
