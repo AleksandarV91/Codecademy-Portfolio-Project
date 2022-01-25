@@ -624,6 +624,12 @@ figcaption a {
   margin-bottom: 1.3rem;
 }
 
+figcaption::after,
+figcaption::before {
+  content: "-";
+  color: var(--light-blue);
+}
+
 @media screen and (min-width: 425px) {
   #work {
     padding: 0 1.5rem;
