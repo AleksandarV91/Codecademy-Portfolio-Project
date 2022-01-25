@@ -565,6 +565,122 @@ nav {
   }
 }
 
+/* ---- WORK SECTION ---- */
+#work {
+  min-height: 100vh;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+#work h3 {
+  color: var(--very-light-blue);
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0625rem;
+  font-weight: 700;
+}
+
+#work h3::after,
+#work h3::before {
+  content: "-";
+  color: var(--light-blue);
+}
+
+#work h2 {
+  font-family: var(--dm-serig-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.7rem;
+}
+
+#work p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.1rem;
+  letter-spacing: 0.03rem;
+  margin-bottom: 1.3rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 425px) {
+  #work {
+    padding: 0 1.5rem;
+  }
+
+  #work h3 {
+    font-size: 1.7rem;
+  }
+
+  #work h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #work h2 {
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+    margin-top: 1.3rem;
+  }
+
+  #work p {
+    padding: 0 5rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.075rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery {
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: 21rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery img {
+    width: 19rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #work h3 {
+    font-size: 2.5rem;
+  }
+
+  #work h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #work p {
+    font-size: 1.5rem;
+    padding: 0 8rem;
+    margin-bottom: 5rem;
+    padding: 0 14.5rem;
+  }
+
+  .gallery img {
+    width: 23rem;
+  }
+}
+
 /* ---- CONTACT SECTION ---- */
 
 #contact {
@@ -817,4 +933,31 @@ textarea::placeholder {
     height: 3.1rem;
     font-size: 1rem;
   }
+}
+
+/* 
+-----------------------------------------
+-----------------------------------------
+---------------- FOOTER -----------------
+-----------------------------------------
+-----------------------------------------
+*/
+
+.footer {
+  background-color: var(--dark-gray);
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+
+.footer p {
+  font-size: 1rem;
+  font-family: var(--karla);
+  font-weight: 400;
+  letter-spacing: 0.0625rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.media-icon i {
+  font-size: 1.3rem;
 }
