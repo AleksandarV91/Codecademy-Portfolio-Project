@@ -615,6 +615,15 @@ nav {
   height: auto;
 }
 
+figcaption a {
+  color: var(--very-light-blue);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.1rem;
+  letter-spacing: 0.03rem;
+  margin-bottom: 1.3rem;
+}
+
 @media screen and (min-width: 425px) {
   #work {
     padding: 0 1.5rem;
@@ -656,6 +665,11 @@ nav {
 @media screen and (min-width: 1024px) {
   .gallery img {
     width: 19rem;
+  }
+
+  figcaption:hover {
+    cursor: pointer;
+    text-decoration: underline 2px var(--very-light-blue);
   }
 }
 
